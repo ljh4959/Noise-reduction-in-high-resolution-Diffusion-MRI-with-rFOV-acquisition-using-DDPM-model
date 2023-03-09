@@ -1,18 +1,15 @@
-# diffusion-DDPM
-PyTorch Implementation of "Denoising Diffusion Probabilistic Models", Ho et al., 2020
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/8377365/188951630-d3e38fb0-9545-4208-bf3b-2296bde10864.png" />
-</p>
+# Noise Reduction in High-Resolution Diffusion MRI with Reduced FOV Acquisition Using Diffusion Probabilistic Models
 
 ## Overview
-This repo is yet another denoising diffusion probabilistic model (DDPM) implementation. This repo tries to stick to the original paper as close as possible.
+The Reduced Field-of-View (rFOV) MRI technique enables high-resolution imaging of Diffusion Magnetic Resonance Imaging (dMRI) by limiting signal acquisition to a pre-selected area of interest. In this study, we explore and present a Denoising Diffusion Probabilistic Model
+(DDPM)-based noise-reduction approach that can be integrated with the rFOV technique to enable imaging of intricate and small tissue structures. Our proposed approach outperforms vanilla DDPM and previous approaches (MP-PCA, supervised learning, and Patch2Self), achieving state-of-the-art performance. Our results demonstrate improved delineation
+of small brain structures and improved ADC maps, which were previously challenging to image. This innovative noise reduction method provides a promising solution for improving the quality of high-resolution dMRI.
 
-The [straightforward UNet model definition](https://github.com/mattroz/diffusion-ddpm/blob/main/src/model/unet.py) (without any fancy model builders, helpers, etc.) was specifically intentional because it can be quite difficult sometimes to get and understand the original model architecture behind all the abstraction layers and blocks and see the underlying entities clearly.
-However some kind of automated model generation with configuration files is handy while experimenting, hence will be added in the nearest future. 
+## Process
+<p align="center">
+  <img src="https://ibb.co/1GxhcXf" />
+</p>
 
-Some equations are borrowed from [this](https://lilianweng.github.io/posts/2021-07-11-diffusion-models) blog post which demystifies whole math behind the diffusion process.
-
-## Diffusion process
 Diffusion process was implemented as a part of a class called [DDPMPipeline](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L9), which containes forward $q(x_t \vert x_{t-1})$ and backward $p_\theta(x_{t-1} \vert x_t)$ diffusion processes.
 
 Backward diffusion process [applies Gaussian noise](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L21) to the input image in a scheduleded manner. 
@@ -21,9 +18,7 @@ $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}(x_t - \frac{1 - \alpha_t}{\sqrt{1 - \bar{\
 
 Here, $\epsilon$ is the UNet model, $\alpha_t$, $\bar{\alpha}_t$ [are precomputed](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L13) and $\sigma_t$ is [calculated](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L65) using these precomputed values at forward diffusion step.
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/8377365/188951361-0168a56b-38fd-4048-8351-de9b3a601299.png" />
-</p>
+
 
 ## UNet
 
