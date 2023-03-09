@@ -35,7 +35,7 @@ To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted 
 </p>
 
 #### Comparison study
-Representative DWI images (b=0 and b=1000 sec/mm<sup>2) and their corresponding ADC maps are shown (synthesized noise level = 15%). Unlike conventional methods, the proposed approach can not only effectively remove the noise, but also well preserve the tissue structure details (as indicated by the red arrows). ADC maps showed the same trend.
+Representative DWI images (b=0 and b=1000 sec/mm<sup>2<sup>) and their corresponding ADC maps are shown (synthesized noise level = 15%). Unlike conventional methods, the proposed approach can not only effectively remove the noise, but also well preserve the tissue structure details (as indicated by the red arrows). ADC maps showed the same trend.
 
 <p align="center">
   <img src="https://i.ibb.co/Tcyfx0P/Fig3.png" />
