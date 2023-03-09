@@ -26,19 +26,19 @@ were difficult to image using previous methods.
 * Stage 2: Using noise estimator for determining the start point of Marchov Chain
 * Stage 3: Operating in the complex domain
 
-## UNet
-
-As stated in the original paper:
-> * Our neural network architecture follows the backbone of PixelCNN++, which is a U-Net based on a Wide ResNet. 
-> * We replaced weight normalization with [group normalization](https://github.com/mattroz/diffusion-ddpm/blob/main/src/model/layers.py#L36) to make the implementation simpler. 
-> * Our 32×32 models use four feature map resolutions (32×32 to 4×4), and our 256×256 models use six.  
-> * All models have two [convolutional residual blocks](https://github.com/mattroz/diffusion-ddpm/blob/00de3c830f3765a347fc5efe2e3fc21d6f597104/src/model/layers.py#L305) per resolution level and [self-attention blocks](https://github.com/mattroz/diffusion-ddpm/blob/00de3c830f3765a347fc5efe2e3fc21d6f597104/src/model/layers.py#L124) at the 16×16 resolution between the convolutional blocks. 
-> * Diffusion time is specified by adding the [Transformer sinusoidal position embedding](https://github.com/mattroz/diffusion-ddpm/blob/00de3c830f3765a347fc5efe2e3fc21d6f597104/src/model/layers.py#L6) into each residual block.
-
-This implementation follows default ResNet blocks architecture without any multiplying factors for simplicity. Also current UNet implementation works better with 128×128 resolution (see next sections) and thus has 5 feature map resoltuions (128 &rarr; 64 &rarr; 32 &rarr; 16 &rarr; 8).
-It is worth noting that subsequent papers suggests more appropriate and better UNet architectures for the diffusion problem.
-
 ## Results
+Ablation study
+
+To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted an ablation study in Fig. 2. Specifically, we considered the following variants: (Base: vanilla DDPM, S: synthesizing restored reference images using LRMA, NE: noise estimator, C: complex diffusion sampling process). Note that the entire pipeline is identical except for the inclusion of the respective stages. For testing, the noise was injected at a level of 5% of the image’s standard deviation.
+
+<p align="center">
+  <img src="https://i.ibb.co/7r85BBC/Fig2.png" />
+</p>
+
+
+
+
+
 
 Training was performed on two datasets:
 * [smithsonian-butterflies-subset](https://huggingface.co/datasets/huggan/smithsonian_butterflies_subset) by HuggingFace
