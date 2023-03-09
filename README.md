@@ -7,7 +7,7 @@ of small brain structures and improved ADC maps, which were previously challengi
 
 ## Process
 <p align="center">
-  <img src="https://ibb.co/1GxhcXf" />
+  <img src="https://i.ibb.co/TM5py0B/Fig1.png" />
 </p>
 
 Diffusion process was implemented as a part of a class called [DDPMPipeline](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L9), which containes forward $q(x_t \vert x_{t-1})$ and backward $p_\theta(x_{t-1} \vert x_t)$ diffusion processes.
