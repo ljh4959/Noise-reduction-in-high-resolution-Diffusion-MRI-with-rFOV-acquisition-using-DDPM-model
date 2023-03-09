@@ -22,9 +22,9 @@ acquired with an untrained orientation. Our results demonstrate improved
 delineation of small brain structures, as well as improved ADC maps, which
 were difficult to image using previous methods.
 
-Stage 1: Training from synthetically improved image
-Stage 2: Using noise estimator for determining the start point of Marchov Chain
-Stage 3: Operating in the complex domain
+> Stage 1: Training from synthetically improved image
+> Stage 2: Using noise estimator for determining the start point of Marchov Chain
+> Stage 3: Operating in the complex domain
 
 ## UNet
 
