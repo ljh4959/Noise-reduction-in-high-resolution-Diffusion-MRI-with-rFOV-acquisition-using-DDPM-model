@@ -27,16 +27,19 @@ were difficult to image using previous methods.
 * Stage 3: Operating in the complex domain
 
 ## Results
-Ablation study
-
-To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted an ablation study in Fig. 2. Specifically, we considered the following variants: (Base: vanilla DDPM, S: synthesizing restored reference images using LRMA, NE: noise estimator, C: complex diffusion sampling process). Note that the entire pipeline is identical except for the inclusion of the respective stages. For testing, the noise was injected at a level of 5% of the image’s standard deviation.
+#### Ablation study
+To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted an ablation study. Specifically, we considered the following variants: (Base: vanilla DDPM, S: synthesizing restored reference images using LRMA, NE: noise estimator, C: complex diffusion sampling process). Note that the entire pipeline is identical except for the inclusion of the respective stages. For testing, the noise was injected at a level of 5% of the image’s standard deviation.
 
 <p align="center">
   <img src="https://i.ibb.co/7r85BBC/Fig2.png" />
 </p>
 
+#### Comparison study
+Representative DWI images (b=0 and b=1000 sec/mm^2) and their corresponding ADC maps are shown (synthesized noise level = 15%). Unlike conventional methods, the proposed approach can not only effectively remove the noise, but also well preserve the tissue structure details (as indicated by the red arrows). ADC maps showed the same trend.
 
-
+<p align="center">
+  <img src="https://i.ibb.co/Tcyfx0P/Fig3.png" />
+</p>
 
 
 
