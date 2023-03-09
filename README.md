@@ -10,13 +10,17 @@ of small brain structures and improved ADC maps, which were previously challengi
   <img src="https://i.ibb.co/TM5py0B/Fig1.png" />
 </p>
 
-Diffusion process was implemented as a part of a class called [DDPMPipeline](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L9), which containes forward $q(x_t \vert x_{t-1})$ and backward $p_\theta(x_{t-1} \vert x_t)$ diffusion processes.
-
-Backward diffusion process [applies Gaussian noise](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L21) to the input image in a scheduleded manner. 
-Forward diffusion process is a process which "denoises" an image using model predictions. It is worth to mention, that UNet model in this particular process predicts some kind of noise residual, and the final "denoised" image is obtained by [applying the following equation](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L67): 
-$$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}(x_t - \frac{1 - \alpha_t}{\sqrt{1 - \bar{\alpha}_t}}\epsilon(x_t,t)) + \sigma_tz$$
-
-Here, $\epsilon$ is the UNet model, $\alpha_t$, $\bar{\alpha}_t$ [are precomputed](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L13) and $\sigma_t$ is [calculated](https://github.com/mattroz/diffusion-ddpm/blob/main/src/scheduler/ddpm.py#L65) using these precomputed values at forward diffusion step.
+1. We investigate an unconditioned DDPM model that can work for various
+noise levels, and achieve superior performance compared to the vanilla
+DDPM model.
+2. We explore the use of synthetic image training as a means of addressing the
+lack of high-quality public datasets.
+3. We examine the effectiveness of performing the noise reduction operation in
+the complex domain.
+4. We validate our approach by applying it to actual images including a subject
+acquired with an untrained orientation. Our results demonstrate improved
+delineation of small brain structures, as well as improved ADC maps, which
+were difficult to image using previous methods.
 
 
 
