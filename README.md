@@ -38,7 +38,7 @@ To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted 
 Representative DWI images (b=0 and b=1000 sec/mm<sup>2</sup>) and their corresponding ADC maps are shown (synthesized noise level = 15%). Unlike conventional methods, the proposed approach can not only effectively remove the noise, but also well preserve the tissue structure details (as indicated by the red arrows). ADC maps showed the same trend.
 
 <p align="center">
-  <img src="https://i.ibb.co/Tcyfx0P/Fig3.png" />
+  <img src="https://github.com/ljh4959/Noise-reduction-in-high-resolution-Diffusion-MRI-with-rFOV-acquisition-using-DDPM-model/files/11497236/Fig3.pdf" />
 </p>
 
 <p align="center">
