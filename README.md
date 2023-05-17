@@ -7,7 +7,7 @@ of small brain structures and improved ADC maps, which were previously challengi
 
 ## Process
 <p align="center">
-  <img src="https://i.ibb.co/TM5py0B/Fig1.png" />
+  <img src="https://github.com/ljh4959/Noise-reduction-in-high-resolution-Diffusion-MRI-with-rFOV-acquisition-using-DDPM-model/assets/59819627/67253c17-9994-44a0-9012-7d2ace1f42a5" />
 </p>
 
 1. We investigate an unconditioned DDPM model that can work for various
