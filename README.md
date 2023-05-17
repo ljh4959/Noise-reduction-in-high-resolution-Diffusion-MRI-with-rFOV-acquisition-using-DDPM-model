@@ -49,5 +49,5 @@ Representative DWI images (b=0 and b=1000 sec/mm<sup>2</sup>) and their correspo
 Additionally, the proposed method generalizes well to untrained orientations. The approach can be further extended to other DWI techniques such as DTI and HARDI, where more diffusion directions are typically acquired. Noise-reduced images exhibit mild blurring, likely due to inadequate SNR in the dataset. A potential remedy could be acquiring a high-quality dataset with more signal averaging.
 
 <p align="center">
-  <img src="https://i.ibb.co/0sRLZkF/Fig5.png" />
+  <img src="https://github.com/ljh4959/Noise-reduction-in-high-resolution-Diffusion-MRI-with-rFOV-acquisition-using-DDPM-model/assets/59819627/89b737e0-1f45-4062-9f4e-618d85cea1e4" />
 </p>
