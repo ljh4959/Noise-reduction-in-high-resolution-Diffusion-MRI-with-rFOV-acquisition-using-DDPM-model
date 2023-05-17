@@ -31,7 +31,7 @@ were difficult to image using previous methods.
 To evaluate the effectiveness of the proposed modules (Stage 1-3), we conducted an ablation study. Specifically, we considered the following variants: (**Base**: vanilla DDPM, **S**: synthesizing restored reference images using LRMA, **NE**: noise estimator, **C**: complex diffusion sampling process). Note that the entire pipeline is identical except for the inclusion of the respective stages. For testing, the noise was injected at a level of 5% of the image’s standard deviation.
 
 <p align="center">
-  <img src="https://i.ibb.co/7r85BBC/Fig2.png" />
+  <img src="https://github.com/ljh4959/Noise-reduction-in-high-resolution-Diffusion-MRI-with-rFOV-acquisition-using-DDPM-model/assets/59819627/6c496ad8-4af0-4fdb-852d-9b44f3d4d74a" />
 </p>
 
 #### Comparison study
