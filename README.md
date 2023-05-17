@@ -42,7 +42,7 @@ Representative DWI images (b=0 and b=1000 sec/mm<sup>2</sup>) and their correspo
 </p>
 
 <p align="center">
-  <img src="https://i.ibb.co/QdL1vSH/Table.png" />
+  <img src="https://github.com/ljh4959/Noise-reduction-in-high-resolution-Diffusion-MRI-with-rFOV-acquisition-using-DDPM-model/assets/59819627/971bdb39-741c-4543-b640-603f829d2858" />
 </p>
 
 #### Untrained dataset
